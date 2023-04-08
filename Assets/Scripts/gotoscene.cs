@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class gotoscene : MonoBehaviour
+public class GoToScene : MonoBehaviour
 {
-    public void gotoLobby()
+    public void gotoMap()
     {
-        SceneManager.LoadScene(sceneName:"Lobby");
+        SceneManager.LoadScene(sceneName:"Map");
     }
 }
