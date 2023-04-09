@@ -19,7 +19,7 @@ public class Main : MonoBehaviour
         onCount = onCount + points;
         if(onCount == switchCount){
             winText.SetActive(true);
-            // SceneManager.LoadScene(sceneName:"Map");
+            SceneManager.LoadScene(sceneName:"Map");
             // DeactivateSwitches();
         }
     }
