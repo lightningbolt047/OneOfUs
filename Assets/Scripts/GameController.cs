@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Player{
@@ -216,6 +217,7 @@ public class GameController : MonoBehaviour
             SetPlayerColorsInactive();
         } else{
             SetGameOverText(playerSide + " Wins!");
+            SceneManager.LoadScene(sceneName:"Map");
         }
         restartButton.SetActive(true);
 
