@@ -12,7 +12,10 @@ public class GridSpace : MonoBehaviour
     private GameController gameController;
     
     public void SetSpace(){
-        if(gameController.playerMove == true){
+        Debug.Log("In SetSpace mtd");
+        Debug.Log(gameController.playerMove);
+        if(gameController.playerMove == true && Input.GetButton("js0")){
+            Debug.Log("In SetSpace IF");
             buttonText.text = gameController.GetPlayerSide();
             button.interactable = false;
             gameController.EndTurn();
