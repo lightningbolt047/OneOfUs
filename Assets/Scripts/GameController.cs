@@ -67,15 +67,17 @@ public class GameController : MonoBehaviour
     }
 
     public void SetStartingSide(string startingSide){
-        playerSide = startingSide;
-        if(playerSide == "X"){
-            SetPlayerColors(playerX, playerO);
-            computerSide = "O";
-        } else{
-            SetPlayerColors(playerO, playerX);
-            computerSide = "X";
+        if(Input.GetButton("js0")){    
+            playerSide = startingSide;
+            if(playerSide == "X"){
+                SetPlayerColors(playerX, playerO);
+                computerSide = "O";
+            } else{
+                SetPlayerColors(playerO, playerX);
+                computerSide = "X";
+            }
+            StartGame();
         }
-        StartGame();
     }
 
     void StartGame(){

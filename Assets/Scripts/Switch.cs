@@ -22,7 +22,7 @@ public class Switch : MonoBehaviour
     // triggered when you click mouse and it is over a collider
     // currenlty configured with pointer click event trigger on prefab!
     public void onMouseUp(){
-        if(Input.GetButton("Submit")){
+        if(Input.GetButton("js0")){
             isUp = !isUp;
             isOn = !isOn;
             on.SetActive(isOn);
