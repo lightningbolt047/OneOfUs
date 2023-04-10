@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoToScene : MonoBehaviour
+public class gotoscene : MonoBehaviour
 {
     public void gotoMap()
     {
