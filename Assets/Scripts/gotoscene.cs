@@ -5,8 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class gotoscene : MonoBehaviour
 {
-    public void gotoLobby()
+    public void gotoMap()
     {
-        SceneManager.LoadScene(sceneName:"Lobby");
+        SceneManager.LoadScene(sceneName:"Map");
+    }
+
+    public void gotoTask1()
+    {
+        SceneManager.LoadScene(sceneName:"Task1");
+    }
+
+    public void gotoTask2()
+    {
+        SceneManager.LoadScene(sceneName:"Task2");
     }
 }
