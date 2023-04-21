@@ -3,12 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Photon.Realtime;
+using System.Linq;
 
 public class NetworkController : MonoBehaviourPunCallbacks
 {
+    public static NetworkController Instance;
+    
     [SerializeField] TMP_InputField roomNameInputField;
 	[SerializeField] TMP_Text errorText;
 	[SerializeField] TMP_Text roomNameText;
+    [SerializeField] Transform roomListContent;
+	[SerializeField] GameObject roomListItemPrefab;
+ 	void Awake()
+	{
+		Instance = this;
+	}
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +46,13 @@ public class NetworkController : MonoBehaviourPunCallbacks
 		PhotonNetwork.CreateRoom(roomNameInputField.text);
 		MenuManager.Instance.OpenMenu("loading");
 	}
-    
+
+	public void JoinRoom(RoomInfo info)
+	{
+		PhotonNetwork.JoinRoom(info.Name);
+		MenuManager.Instance.OpenMenu("loading");
+	}
+
     public override void OnJoinedRoom()
 	{
 		MenuManager.Instance.OpenMenu("room");
@@ -75,6 +91,22 @@ public class NetworkController : MonoBehaviourPunCallbacks
 	{
 		MenuManager.Instance.OpenMenu("lobby");
 	}
+
+	public override void OnRoomListUpdate(List<RoomInfo> roomList)
+	{
+		foreach(Transform trans in roomListContent)
+		{
+			Destroy(trans.gameObject);
+		}
+
+		for(int i = 0; i < roomList.Count; i++)
+		{
+			if(roomList[i].RemovedFromList)
+				continue;
+			Instantiate(roomListItemPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(roomList[i]);
+		}
+	}
+
     // Update is called once per frame
     void Update()
     {
