@@ -5,22 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class gotoscene : MonoBehaviour
 {
-    //For Start Page
-    public void gotoCreateJoinRoom()
-    {
-        SceneManager.LoadScene(sceneName: "CreateJoinRoom");
-    }
-    public void quitgame()   //Different from other gotoscene function but kept it here for consistency
-    {
-        Application.Quit();
-    }
-
-    //For Creaet Join Room
-    public void gotoLobby()
-    {
-        SceneManager.LoadScene(sceneName: "Lobby");
-    }
-
     public void gotoMap()
     {
         SceneManager.LoadScene(sceneName:"Map");
