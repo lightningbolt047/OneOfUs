@@ -9,12 +9,15 @@ using System.Linq;
 public class NetworkController : MonoBehaviourPunCallbacks
 {
     public static NetworkController Instance;
-    
+
     [SerializeField] TMP_InputField roomNameInputField;
 	[SerializeField] TMP_Text errorText;
 	[SerializeField] TMP_Text roomNameText;
     [SerializeField] Transform roomListContent;
 	[SerializeField] GameObject roomListItemPrefab;
+    [SerializeField] Transform playerListContent;
+	[SerializeField] GameObject PlayerListItemPrefab;
+
  	void Awake()
 	{
 		Instance = this;
@@ -34,6 +37,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby() {
         MenuManager.Instance.OpenMenu("lobby");
+        PhotonNetwork.NickName = "Player" + Random.Range(0,4).ToString("0");
         Debug.Log("Joined lobby");
     }
 
@@ -107,9 +111,9 @@ public class NetworkController : MonoBehaviourPunCallbacks
 		}
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	// public override void OnPlayerEnteredRoom(Player newPlayer)
+	// {
+	// 	Instantiate(PlayerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
+	// }
+
 }
