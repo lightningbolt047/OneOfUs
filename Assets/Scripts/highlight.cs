@@ -7,6 +7,8 @@ public class highlight : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 {
 
     bool pointerInside = false;
+    public bool commonInteractable = true;
+    public GameObject controlAlert;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,12 @@ public class highlight : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
         if(pointerInside)
         {
+            Debug.Log("Hello");
+            if (commonInteractable && !controlAlert.activeSelf)
+            {
+                controlAlert.SetActive(true);
+                GameObject.Find("ControlAlertText").GetComponent<TMPro.TextMeshProUGUI>().text="Press OK to interact with object";
+            }
             outline.OutlineColor = Color.white;
         }
         else
