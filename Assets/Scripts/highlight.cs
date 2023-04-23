@@ -36,7 +36,6 @@ public class highlight : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
         if(pointerInside)
         {
-            Debug.Log("Hello");
             if (commonInteractable && !controlAlert.activeSelf)
             {
                 controlAlert.SetActive(true);
