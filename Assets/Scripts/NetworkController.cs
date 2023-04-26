@@ -17,6 +17,8 @@ public class NetworkController : MonoBehaviourPunCallbacks
 	[SerializeField] GameObject roomListItemPrefab;
     [SerializeField] Transform playerListContent;
 	[SerializeField] GameObject PlayerListItemPrefab;
+	[SerializeField] GameObject startGameButton;
+	private List<string> availableNames = new List<string> { "Player1", "Player2", "Player3", "Player4" };
 
  	void Awake()
 	{
@@ -33,13 +35,20 @@ public class NetworkController : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster() {
         Debug.Log("We are connected to "+ PhotonNetwork.CloudRegion);
         PhotonNetwork.JoinLobby();
+
+		// sync scene for all players
+		PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     public override void OnJoinedLobby() {
-        MenuManager.Instance.OpenMenu("lobby");
-        PhotonNetwork.NickName = "Player" + Random.Range(0,4).ToString("0");
-        Debug.Log("Joined lobby");
+        MenuManager.Instance.OpenMenu("lobby");		
+		int randomIndex = Random.Range(0, availableNames.Count);
+		string selectedName = availableNames[randomIndex];
+		availableNames.RemoveAt(randomIndex);
+		PhotonNetwork.NickName = selectedName;
+		Debug.Log("Joined lobby with nickname: " + selectedName);
     }
+	
 
 	public void CreateRoom()
 	{
@@ -56,25 +65,31 @@ public class NetworkController : MonoBehaviourPunCallbacks
 		PhotonNetwork.JoinRoom(info.Name);
 		MenuManager.Instance.OpenMenu("loading");
 	}
-
-    public override void OnJoinedRoom()
+	public override void OnJoinedRoom()
 	{
 		MenuManager.Instance.OpenMenu("room");
 		roomNameText.text = PhotonNetwork.CurrentRoom.Name;
 
-		// Player[] players = PhotonNetwork.PlayerList;
+		Photon.Realtime.Player[] players = PhotonNetwork.PlayerList;
 
-		// foreach(Transform child in playerListContent)
-		// {
-		// 	Destroy(child.gameObject);
-		// }
+		foreach(Transform child in playerListContent)
+		{
+			Destroy(child.gameObject);
+		}
 
-		// for(int i = 0; i < players.Count(); i++)
-		// {
-		// 	Instantiate(PlayerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(players[i]);
-		// }
+		for(int i = 0; i < players.Count(); i++)
+		{
+			Instantiate(PlayerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(players[i]);
+		}
 
-		// startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+		// set the start game button active only for the host
+		startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+	}
+
+	// TODO: If the host leaves the game some other player should be able to start the game.
+	public override void OnMasterClientSwitched(Photon.Realtime.Player newMasterClient)
+	{
+		startGameButton.SetActive(PhotonNetwork.IsMasterClient);
 	}
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -82,6 +97,10 @@ public class NetworkController : MonoBehaviourPunCallbacks
 		errorText.text = "Room Creation Failed: " + message;
 		Debug.LogError("Room Creation Failed: " + message);
 		MenuManager.Instance.OpenMenu("error");
+	}
+
+	public void StartGame() {
+		PhotonNetwork.LoadLevel(2);
 	}
 
     public void LeaveRoom()
@@ -111,9 +130,9 @@ public class NetworkController : MonoBehaviourPunCallbacks
 		}
 	}
 
-	// public override void OnPlayerEnteredRoom(Player newPlayer)
-	// {
-	// 	Instantiate(PlayerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
-	// }
+	public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
+	{
+		Instantiate(PlayerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
+	}
 
 }
