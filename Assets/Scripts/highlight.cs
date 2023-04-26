@@ -40,7 +40,7 @@ public class highlight : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             if (commonInteractable && !controlAlert.activeSelf)
             {
                 controlAlert.SetActive(true);
-                GameObject.Find("ControlAlertText").GetComponent<TMPro.TextMeshProUGUI>().text="Press OK to interact with object";
+                //GameObject.Find("ControlAlertText").GetComponent<TMPro.TextMeshProUGUI>().text="Press OK to interact with object";
             }
             outline.OutlineColor = Color.white;
         }
