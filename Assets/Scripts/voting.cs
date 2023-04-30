@@ -16,6 +16,8 @@ public class voting : MonoBehaviour
     public void populateCandidates()
     {
         GameObject grid = GameObject.Find("Grid");
+
+        //Code for one person load
         GameObject instantiated=Instantiate(playerBannerPrefab);
         instantiated.transform.parent = grid.transform;
         GameObject childGameObject=instantiated.transform.Find("player_name").gameObject;
