@@ -12,12 +12,13 @@ public class TaskTracker : MonoBehaviour
     static List<string> completedTasks = new List<string>();
 
     // Reference to the task tracking text on the canvas
-    public static Text remainingTasksText;
+    public static GameObject remainingTasksText;
 
     // Start is called before the first frame update
     void Start()
     {
-        remainingTasksText.text = "Tasks remaining: " + tasks.Length;
+        TaskTracker.remainingTasksText = GameObject.Find("TaskCounter");
+        TaskTracker.remainingTasksText.GetComponent<Text>().text = "Tasks remaining: " + tasks.Length;
         // Example usage of CompleteTask method
         // CompleteTask("Task 2");
         // CompleteTask("Task 1");
@@ -43,7 +44,7 @@ public class TaskTracker : MonoBehaviour
         Debug.Log("Tasks remaining: " + remainingTasks);
 
         // Update the task tracking text on the canvas
-        remainingTasksText.text = "Tasks remaining: " + remainingTasks;
+        TaskTracker.remainingTasksText.GetComponent<Text>().text = "Tasks remaining: " + remainingTasks;
         //taskTrackingText.text = "Tasks remaining: " + remainingTasks;
         
     }
