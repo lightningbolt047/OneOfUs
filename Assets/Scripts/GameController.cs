@@ -219,6 +219,9 @@ public class GameController : MonoBehaviour
             SetPlayerColorsInactive();
         } else{
             SetGameOverText(playerSide + " Wins!");
+            GameObject taskTrackingObject = GameObject.Find("TaskTracker");
+            TaskTracker taskTracking = taskTrackingObject.GetComponent<TaskTracker>();
+            taskTracking.CompleteTask("Task 1");
             SceneManager.LoadScene(sceneName:"Map");
         }
         restartButton.SetActive(true);
