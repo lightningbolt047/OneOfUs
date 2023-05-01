@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class TaskTracker : MonoBehaviour
 {
     // Define the tasks 
-    string[] tasks = {"Task 1", "Task 2", "Task 3", "Task 4"};
+    static string[] tasks = {"Task 1", "Task 2", "Task 3", "Task 4"};
 
     // Create a list to track completed tasks
-    List<string> completedTasks = new List<string>();
+    static List<string> completedTasks = new List<string>();
 
     // Reference to the task tracking text on the canvas
-    public Text remainingTasksText;
+    public static Text remainingTasksText;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class TaskTracker : MonoBehaviour
     }
 
     // Function to complete a task and add it to the list of completed tasks
-    public void CompleteTask(string task)
+    public static void CompleteTask(string task)
     {
         if (completedTasks.Contains(task))
         {
@@ -45,6 +45,7 @@ public class TaskTracker : MonoBehaviour
         // Update the task tracking text on the canvas
         remainingTasksText.text = "Tasks remaining: " + remainingTasks;
         //taskTrackingText.text = "Tasks remaining: " + remainingTasks;
+        
     }
 }
 
