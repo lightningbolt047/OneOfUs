@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class TaskTracker : MonoBehaviour
 {
+    static PhotonView PV;
     // Define the tasks 
     static string[] tasks = {"Task 1", "Task 2", "Task 3", "Task 4"};
 
@@ -13,10 +16,11 @@ public class TaskTracker : MonoBehaviour
 
     // Reference to the task tracking text on the canvas
     public static GameObject remainingTasksText;
-
+    static int remainingTasks;
     // Start is called before the first frame update
     void Start()
     {
+        PV = GetComponent<PhotonView>();
         TaskTracker.remainingTasksText = GameObject.Find("TaskCounter");
         TaskTracker.remainingTasksText.GetComponent<Text>().text = "Tasks remaining: " + tasks.Length;
         // Example usage of CompleteTask method
@@ -29,6 +33,11 @@ public class TaskTracker : MonoBehaviour
     // Function to complete a task and add it to the list of completed tasks
     public static void CompleteTask(string task)
     {
+        if (task == null)
+        {
+            Debug.LogError("Task name is null");
+            return;
+        }
         if (completedTasks.Contains(task))
         {
             Debug.Log("Task " + task + " has already been completed.");
@@ -40,13 +49,24 @@ public class TaskTracker : MonoBehaviour
         }
 
         // Calculate the number of remaining tasks
-        int remainingTasks = tasks.Length - completedTasks.Count;
+        remainingTasks = tasks.Length - completedTasks.Count;
         Debug.Log("Tasks remaining: " + remainingTasks);
-
-        // Update the task tracking text on the canvas
-        TaskTracker.remainingTasksText.GetComponent<Text>().text = "Tasks remaining: " + remainingTasks;
-        //taskTrackingText.text = "Tasks remaining: " + remainingTasks;
-        
+        PV.RPC("UpdateScore", RpcTarget.All, remainingTasks);
     }
+
+    [PunRPC]
+    void UpdateScore(int newScore)
+    {
+        Debug.Log(newScore);
+        // Update the task tracking text on the canvas
+        TaskTracker.remainingTasksText.GetComponent<Text>().text = "Tasks remaining: " + newScore;
+        // taskTrackingText.text = "Tasks remaining: " + remainingTasks;
+    }
+
+    // public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
+    // {
+    //     // When a new player enters the room, send them the current score value
+    //     photonView.RPC(remainingTasks, newPlayer, remainingTasks);
+    // }
 }
 
