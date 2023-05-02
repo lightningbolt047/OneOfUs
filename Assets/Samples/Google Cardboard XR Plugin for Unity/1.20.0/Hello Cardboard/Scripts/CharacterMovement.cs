@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class CharacterMovement : MonoBehaviour
 {
+    PhotonView PV;
     CharacterController charCntrl;
     [Tooltip("The speed at which the character will move.")]
     public float speed = 5f;
@@ -11,16 +14,31 @@ public class CharacterMovement : MonoBehaviour
     public GameObject cameraObj;
     [Tooltip("Should be checked if using the Bluetooth Controller to move. If using keyboard, leave this unchecked.")]
     public bool joyStickMode;
+    void Awake()
+	{
+		PV = GetComponent<PhotonView>();
+	}
 
     // Start is called before the first frame update
     void Start()
     {
+        if(!PV.IsMine)
+		{
+			Destroy(GetComponentInChildren<Camera>().gameObject);
+		}
         charCntrl = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!PV.IsMine) {
+			return;
+		}
+        move();
+    }
+    
+    void move() {
         //Get horizontal and Vertical movements
         float horComp = Input.GetAxis("Horizontal");
         float vertComp = Input.GetAxis("Vertical");
@@ -48,7 +66,5 @@ public class CharacterMovement : MonoBehaviour
      
 
         charCntrl.SimpleMove(moveVect);
-
-
     }
 }

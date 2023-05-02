@@ -18,7 +18,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
     [SerializeField] Transform playerListContent;
 	[SerializeField] GameObject PlayerListItemPrefab;
 	[SerializeField] GameObject startGameButton;
-	private List<string> availableNames = new List<string> { "Player1", "Player2", "Player3", "Player4" };
+	private List<string> availableNames = new List<string> { "red", "green", "blue", "yellow", "pink" };
 
  	void Awake()
 	{
@@ -46,7 +46,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
 		string selectedName = availableNames[randomIndex];
 		availableNames.RemoveAt(randomIndex);
 		PhotonNetwork.NickName = selectedName;
-		Debug.Log("Joined lobby with nickname: " + selectedName);
+		Debug.Log(selectedName + " joined the game with nickname");
     }
 	
 
