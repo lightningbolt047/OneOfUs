@@ -256,7 +256,7 @@ PrefabInstance:
     - target: {fileID: 7287137020585607022, guid: 186741bf17cbb0e4fa3ef06daa1f190f, type: 3}
       propertyPath: m_FirstSelected
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2189748323126415760, guid: 749e7af19cb59cd499dd3a97c65cefae, type: 3}
     - target: {fileID: 7287137020755404942, guid: 186741bf17cbb0e4fa3ef06daa1f190f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -295,6 +295,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 186741bf17cbb0e4fa3ef06daa1f190f, type: 3}
+--- !u!223 &3777370486606945273 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 7287137018922827513, guid: 186741bf17cbb0e4fa3ef06daa1f190f, type: 3}
+  m_PrefabInstance: {fileID: 5857765789779502336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3777370487032928878 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7287137020585607022, guid: 186741bf17cbb0e4fa3ef06daa1f190f, type: 3}
@@ -323,8 +328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a3657b8cec48341a935d9ab3d20212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  c: {fileID: 0}
-  B: {fileID: 0}
+  c: {fileID: 3777370486606945273}
+  B: {fileID: 2189748323126415760, guid: 749e7af19cb59cd499dd3a97c65cefae, type: 3}
   eventsystem: {fileID: 3777370487032928878}
 --- !u!1 &3777370487198797204 stripped
 GameObject:

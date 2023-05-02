@@ -296,11 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -15980,10 +15976,6 @@ MonoBehaviour:
     - {x: 0.6178535, y: -0.4241322, z: 0.66209435}
     - {x: 0.85206425, y: -0.28234583, z: 0.44075775}
     - {x: 0.4839085, y: 0.70493245, z: 0.5185583}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &10949995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15996,7 +15988,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!114 &10949996
@@ -19624,19 +19615,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &747827856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19649,7 +19632,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!114 &747827861
@@ -22092,11 +22074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -26078,10 +26056,6 @@ MonoBehaviour:
     - {x: -0.018223118, y: 0.9997178, z: 0.015238595}
     - {x: -0.023400865, y: 0.99970216, z: -0.0069169854}
     - {x: -0.025122767, y: 0.99952376, z: -0.017919919}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &1088485147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26094,7 +26068,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!1 &1111239095
@@ -26324,7 +26297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!1 &1130405874 stripped
@@ -26345,11 +26317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -42029,10 +41997,6 @@ MonoBehaviour:
     - {x: 0.6178535, y: -0.4241322, z: 0.66209435}
     - {x: 0.85206425, y: -0.28234583, z: 0.44075775}
     - {x: 0.4839085, y: 0.70493245, z: 0.5185583}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &1130405876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42046,11 +42010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -57730,10 +57690,6 @@ MonoBehaviour:
     - {x: 0.6178535, y: -0.4241322, z: 0.66209435}
     - {x: 0.85206425, y: -0.28234583, z: 0.44075775}
     - {x: 0.4839085, y: 0.70493245, z: 0.5185583}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!4 &1130405877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8150656692776182782, guid: 85613a3a0f37dab48bc7c0408ab0ca41, type: 3}
@@ -57765,7 +57721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!1 &1133528048
@@ -58256,7 +58211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!114 &1221277284
@@ -58272,19 +58226,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &1221277285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58821,7 +58767,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!114 &1387414825
@@ -58837,11 +58782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -60848,10 +60789,6 @@ MonoBehaviour:
     - {x: -0.028264206, y: 0.70654166, z: 0.7071067}
     - {x: -0.04831661, y: 0.7054541, z: 0.70710677}
     - {x: 0.02826992, y: -0.7065415, z: 0.70710677}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &1387414828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61853,11 +61790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -62423,10 +62356,6 @@ MonoBehaviour:
     - {x: 0.41762137, y: 0.70710677, z: -0.57060707}
     - {x: 0.0024929135, y: 0.70710677, z: -0.7071024}
     - {x: -0.41762137, y: 0.70710677, z: 0.57060707}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &1595139483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62439,7 +62368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!1 &1598137707
@@ -63124,11 +63052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -67110,10 +67034,6 @@ MonoBehaviour:
     - {x: -0.018223118, y: 0.9997178, z: 0.015238595}
     - {x: -0.023400865, y: 0.99970216, z: -0.0069169854}
     - {x: -0.025122767, y: 0.99952376, z: -0.017919919}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &1644070898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67126,7 +67046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!1001 &1646109576
@@ -67216,11 +67135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -69805,10 +69720,6 @@ MonoBehaviour:
     - {x: 0, y: 0, z: 1}
     - {x: 0, y: 0, z: 1}
     - {x: 0, y: 0, z: 1}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &1646109579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69821,7 +69732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!1 &1693405872 stripped
@@ -69842,11 +69752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -74853,10 +74759,6 @@ MonoBehaviour:
     - {x: 0.0000038946064, y: 0.9073622, z: 0.42034978}
     - {x: -0.0000029889266, y: 0.90736014, z: 0.42035416}
     - {x: 0.0000044038075, y: 0.9073624, z: 0.42034918}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &1693405877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74869,7 +74771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!1001 &1720958033
@@ -74953,7 +74854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2189748323126415761, guid: 749e7af19cb59cd499dd3a97c65cefae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 662.5155
+      value: 294.0155
       objectReference: {fileID: 0}
     - target: {fileID: 2189748323126415761, guid: 749e7af19cb59cd499dd3a97c65cefae, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -77259,11 +77160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -77442,10 +77339,6 @@ MonoBehaviour:
     - {x: 0.05448474, y: 0.5803816, z: -0.81251997}
     - {x: 0.5653499, y: 0.14209232, z: -0.81252027}
     - {x: 0.6511362, y: 0.7589609, z: 0}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &1925365046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77458,7 +77351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!114 &1925365050
@@ -77642,11 +77534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -78212,10 +78100,6 @@ MonoBehaviour:
     - {x: 0.41762137, y: 0.70710677, z: -0.57060707}
     - {x: 0.0024929135, y: 0.70710677, z: -0.7071024}
     - {x: -0.41762137, y: 0.70710677, z: 0.57060707}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &1959496878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78228,7 +78112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!1 &1963923350
@@ -78511,11 +78394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -78968,10 +78847,6 @@ MonoBehaviour:
     - {x: 1, y: 0, z: 0}
     - {x: 0.8093025, y: 0.47715408, z: -0.34256884}
     - {x: 1, y: 0, z: 0}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &2000487228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78984,7 +78859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!114 &2000487232
@@ -79108,7 +78982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2189748323126415761, guid: 749e7af19cb59cd499dd3a97c65cefae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 978.5155
+      value: 610.0155
       objectReference: {fileID: 0}
     - target: {fileID: 2189748323126415761, guid: 749e7af19cb59cd499dd3a97c65cefae, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -79884,19 +79758,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &2077547107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79909,7 +79775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 640816388}
 --- !u!1001 &2083100647
@@ -80266,11 +80131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 1
   bakeKeys:
@@ -80433,10 +80294,6 @@ MonoBehaviour:
     - {x: 0.36121553, y: 0.9252797, z: 0.115675665}
     - {x: 0, y: 0.27106395, z: 0.96256137}
     - {x: 0.83566356, y: 0.44499984, z: 0.3219339}
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!114 &2144221601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80449,7 +80306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 0
   controlAlert: {fileID: 640816388}
 --- !u!114 &2144221605
@@ -80629,7 +80485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc6dcf2299b2e429270f918095058e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerInside: 0
   commonInteractable: 1
   controlAlert: {fileID: 977213377}
 --- !u!114 &7209389771020366802
@@ -80645,19 +80500,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
-  renderers: []
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 1
 --- !u!1001 &7680915940449367502
 PrefabInstance:
   m_ObjectHideFlags: 0
