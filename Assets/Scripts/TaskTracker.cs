@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TaskTracker : MonoBehaviour
 {
     // Define the tasks 
-    static string[] tasks = {"Task 1", "Task 2", "Task 3", "Task 4"};
+    public static string[] tasks = {"Task 1", "Task 2", "Task 3", "Task 4"};
 
     // Create a list to track completed tasks
-    static List<string> completedTasks = new List<string>();
+    public static List<string> completedTasks = new List<string>();
 
     // Reference to the task tracking text on the canvas
     public static GameObject remainingTasksText;
@@ -24,6 +25,9 @@ public class TaskTracker : MonoBehaviour
         // CompleteTask("Task 1");
         // CompleteTask("Task 4");
         // CompleteTask("Task 3");
+    }
+    void Update(){
+        
     }
 
     // Function to complete a task and add it to the list of completed tasks

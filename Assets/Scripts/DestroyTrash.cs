@@ -29,6 +29,7 @@ public class DestroyTrash : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         if(pointerOverButton && Input.GetButton("js0")){ //js0     //e - js4 // js1 - b
             if(timer>=2){
                 Destroy(currentGameObject);
+                TaskTracker.CompleteTask("Task 4");
                 timer = 0f;
             } else{
                 timer += Time.deltaTime;
