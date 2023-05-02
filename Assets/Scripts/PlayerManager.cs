@@ -17,7 +17,13 @@ public class PlayerManager : MonoBehaviour
 	public Material green;
 
 	GameObject controller;
-
+	List<Vector3> spawnPosition = new List<Vector3> {
+    	new Vector3(235.0f, 9.699999809265137f, 109.4000015258789f),
+    	new Vector3(216.58311462402345f, 1.0799999237060547f, 141.476318359375f),
+		new Vector3(68.49115f, 1.0799999237060547f, 102.476318359375f),
+		new Vector3(251.49115f, 1.0799999237060547f, 115.476318359375f),
+		new Vector3(228.49115f, 1.0799999237060547f, 238.476318359375f)
+	};
 	int kills;
 	int deaths;
 
@@ -35,9 +41,14 @@ public class PlayerManager : MonoBehaviour
 
 	void CreateController()
 	{
-        // Debug.Log("Instantiated player controller");
-		GameObject prefabInstance = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "gamer"), new Vector3(235.0f, 9.699999809265137f, 109.4000015258789f), Quaternion.identity, 0, new object[] { PV.ViewID });
+		int randomIndex = Random.Range(0, spawnPosition.Count);
+		Vector3 randomSpawnPosition = spawnPosition[randomIndex];
+		spawnPosition.RemoveAt(randomIndex);
+		GameObject prefabInstance = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "gamer"), randomSpawnPosition, Quaternion.identity, 0, new object[] { PV.ViewID });
 		Transform childTransform = prefabInstance.transform.Find("amongus");
+		if(childTransform == null) {
+			Debug.Log("Empty");
+		}
 		Renderer childRenderer = childTransform.GetComponent<Renderer>();
 		if (PhotonNetwork.NickName == "pink") {
 			childRenderer.material = pink;
