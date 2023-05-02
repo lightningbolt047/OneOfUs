@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreateJoinRoom.unity
     guid: 189337e19bc99734eb848784097d005b
+  - enabled: 1
+    path: Assets/Scenes/Instruction.unity
+    guid: b753fd72f7992634db5a85700a49db5e
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7ec78ddf5579343a080e83c747a48d23, type: 2}
