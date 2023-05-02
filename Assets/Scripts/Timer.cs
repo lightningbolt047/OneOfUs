@@ -41,6 +41,7 @@ public class Timer : MonoBehaviour
         // Check if all tasks have been completed within the two-minute time limit
         if (timeValue > 0 && TaskTracker.completedTasks.Count == TaskTracker.tasks.Length)
         {
+            TaskOverlay.SetActive(false);
             SceneManager.LoadScene("Winner");
         }
     }
