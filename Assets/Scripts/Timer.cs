@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
+    public GameObject TaskOverlay;
     public static Timer instance;
     public float timeValue = 120;
     public Text timerText;
@@ -32,7 +33,8 @@ public class Timer : MonoBehaviour
         else
         {
             timeValue = 0;
-            SceneManager.LoadScene("Start");
+            TaskOverlay.SetActive(false);
+            SceneManager.LoadScene("Loser");
         }
 
         DisplayTime(timeValue);
