@@ -21,8 +21,7 @@ public class DestroyTrash : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("In DestroyTrash.cs");
-        Debug.Log(gameObject.transform.parent.gameObject.name);
+        // Debug.Log(gameObject.transform.parent.gameObject.name);
         character = GameObject.Find("Character");
         //GameObject.Find("DestroyTrashText").GetComponent<TMPro.TextMeshProUGUI>().text="Press 'A' for 3 sec to destroy trash";
 

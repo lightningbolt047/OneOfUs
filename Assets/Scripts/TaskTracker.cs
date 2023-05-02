@@ -10,7 +10,7 @@ public class TaskTracker : MonoBehaviour
 {
     static PhotonView PV;
     // Define the tasks 
-    public static string[] tasks = {"Task 1", "Task 2", "Task 3", "Task 4"};
+    public static string[] tasks = {"Task 1", "Task 2"};
 
     // Create a list to track completed tasks
     public static List<string> completedTasks = new List<string>();
@@ -42,12 +42,9 @@ public class TaskTracker : MonoBehaviour
             Debug.LogError("Task name is null");
             return;
         }
-        if (completedTasks.Contains(task))
-        {
+        if (completedTasks.Contains(task)) {
             Debug.Log("Task " + task + " has already been completed.");
-        }
-        else
-        {
+        } else {
             completedTasks.Add(task);
             Debug.Log("Completed task: " + task);  
         }
@@ -55,13 +52,14 @@ public class TaskTracker : MonoBehaviour
         // Calculate the number of remaining tasks
         remainingTasks = tasks.Length - completedTasks.Count;
         Debug.Log("Tasks remaining: " + remainingTasks);
-        PV.RPC("UpdateScore", RpcTarget.All, remainingTasks);
+        PV.RPC("UpdateScore", RpcTarget.All, remainingTasks, completedTasks.Count);
     }
 
     [PunRPC]
-    void UpdateScore(int newScore)
+    void UpdateScore(int newScore, int completedTaskCount)
     {
-        Debug.Log(newScore);
+        Debug.Log("CompletedTaskCount: "+ completedTaskCount);
+        Debug.Log("remaining taask: "+newScore);
         // Update the task tracking text on the canvas
         TaskTracker.remainingTasksText.GetComponent<Text>().text = "Tasks remaining: " + newScore;
         // taskTrackingText.text = "Tasks remaining: " + remainingTasks;
