@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2741712063499223421}
   - component: {fileID: 195097527897408275}
   - component: {fileID: 6290872834608543690}
+  - component: {fileID: 7003567594577865515}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -72,3 +73,25 @@ MonoBehaviour:
   blue: {fileID: 2100000, guid: f8faa9fcdd067421ea74cdb96f987f0c, type: 2}
   yellow: {fileID: 2100000, guid: af6d26e7930d94205b95efd89d8298d1, type: 2}
   green: {fileID: 2100000, guid: ec7147b4969524db6bbcd1f2fd9b7ded, type: 2}
+--- !u!114 &7003567594577865515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575216520956570404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
