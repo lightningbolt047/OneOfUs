@@ -62210,12 +62210,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    Welcome To Task-3!
+    Welcome To Task-4!
 
 
     You have to answer three questions correctly
     which best answers according to the given picture. If you make a mistake, you''ll
-    have to start again. Point & Press Y.'
+    have to start again. Point & Press A.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
