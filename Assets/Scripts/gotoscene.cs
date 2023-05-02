@@ -21,6 +21,12 @@ public class gotoscene : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName: "StartPage");
     }
+
+    public void Instructionscene()
+    {
+        SceneManager.LoadScene(sceneName: "Instruction");
+    }
+
     public void gotoLobby()
     {
         SceneManager.LoadScene(sceneName: "Lobby");
