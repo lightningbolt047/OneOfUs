@@ -17,6 +17,7 @@ public class MenuNav : MonoBehaviour
         {
             if (eventsystem.GetComponent<StandaloneInputModule>().enabled == false)
             {
+                Debug.Log("B");
                 eventsystem.GetComponent<XRCardboardInputModule>().enabled = false;
                 eventsystem.GetComponent<StandaloneInputModule>().enabled = true;
                 EventSystem.current.SetSelectedGameObject(null);

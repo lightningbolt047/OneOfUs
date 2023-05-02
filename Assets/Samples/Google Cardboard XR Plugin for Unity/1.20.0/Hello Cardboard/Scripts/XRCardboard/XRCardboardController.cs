@@ -113,23 +113,26 @@ public class XRCardboardController : MonoBehaviour
 
         IEnumerator enableVRRoutine()
         {
-            SetObjects(true);
-#if UNITY_EDITOR
-            yield return null;
-            vrActive = true;
-#else
-            var xrManager = XRGeneralSettings.Instance.Manager;
-            if (!xrManager.isInitializationComplete)
+            if (cameraTransform) {
+                SetObjects(true);
+                #if UNITY_EDITOR
+                yield return null;
+                vrActive = true;
+                #else
+                var xrManager = XRGeneralSettings.Instance.Manager;
+                if (!xrManager.isInitializationComplete)
                 yield return xrManager.InitializeLoader();
-            xrManager.StartSubsystems();
-#endif
-            Screen.sleepTimeout = SleepTimeout.NeverSleep;
-            ResetCamera();
+                xrManager.StartSubsystems();
+                #endif
+                Screen.sleepTimeout = SleepTimeout.NeverSleep;
+                ResetCamera();
+            }
         }
     }
 
     void SetObjects(bool vrActive)
     {
+        
         standardGroup.SetActive(!vrActive);
         vrGroup.SetActive(vrActive);
         standardInputModule.enabled = !vrActive;
