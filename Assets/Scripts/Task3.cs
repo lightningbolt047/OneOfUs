@@ -70,6 +70,7 @@ public class Task3 : MonoBehaviour
     {
         Q3.GetComponent<Canvas>().enabled = false;
         Debug.Log("You won");
+        TaskTracker.CompleteTask("Task 3");
         win.GetComponent<Canvas>().enabled = true;
 
     }
