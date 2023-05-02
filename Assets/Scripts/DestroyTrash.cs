@@ -24,7 +24,7 @@ public class DestroyTrash : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         Debug.Log("In DestroyTrash.cs");
         Debug.Log(gameObject.transform.parent.gameObject.name);
         character = GameObject.Find("Character");
-        GameObject.Find("DestroyTrashText").GetComponent<TMPro.TextMeshProUGUI>().text="Press 'A' for 3 sec to destroy trash";
+        //GameObject.Find("DestroyTrashText").GetComponent<TMPro.TextMeshProUGUI>().text="Press 'A' for 3 sec to destroy trash";
 
         if(pointerOverButton && Input.GetButton("js0")){ //js0     //e - js4 // js1 - b
             if(timer>=2){
