@@ -23,6 +23,8 @@ public class MenuNav : MonoBehaviour
                 EventSystem.current.SetSelectedGameObject(null);
                 EventSystem.current.SetSelectedGameObject(B);
             }
+            // eventsystem.GetComponent<XRCardboardInputModule>().enabled = true;
+            // eventsystem.GetComponent<StandaloneInputModule>().enabled = false;
         }
     }
 }

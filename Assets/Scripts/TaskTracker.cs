@@ -10,7 +10,7 @@ public class TaskTracker : MonoBehaviour
 {
     static PhotonView PV;
     // Define the tasks 
-    public static string[] tasks = {"Task 1", "Task 2"};
+    public static string[] tasks = {"Task 1", "Task 2", "Task 3", "Task 4"};
 
     // Create a list to track completed tasks
     public static List<string> completedTasks = new List<string>();
