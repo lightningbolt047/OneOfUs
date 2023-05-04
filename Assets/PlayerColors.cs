@@ -53,6 +53,6 @@ public class PlayerColors : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AssignColors();
+        //AssignColors();
     }
 }
