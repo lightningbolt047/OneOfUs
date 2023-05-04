@@ -8,11 +8,13 @@ public class gotoscene : MonoBehaviour
     //For Start Page
     public void gotoCreateJoinRoom()
     {
+        Debug.Log("Scne");
         SceneManager.LoadScene(sceneName: "CreateJoinRoom");
     }
 
     public void quitgame()   //Different from other gotoscene function but kept it here for consistency
     {
+        Debug.Log("Scne");
         Application.Quit();
     }
 
