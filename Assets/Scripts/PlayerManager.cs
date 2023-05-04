@@ -14,7 +14,7 @@ public class PlayerManager : MonoBehaviour
 	public Material red;
 	public Material blue;
 	public Material yellow;
-	public Material green;
+	public Material green;	
 
 	GameObject controller;
 	List<Vector3> spawnPosition = new List<Vector3> {
@@ -45,6 +45,8 @@ public class PlayerManager : MonoBehaviour
 		Vector3 randomSpawnPosition = spawnPosition[randomIndex];
 		spawnPosition.RemoveAt(randomIndex);
 		GameObject prefabInstance = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "gamer"), randomSpawnPosition, Quaternion.identity, 0, new object[] { PV.ViewID });
+		prefabInstance.name = PhotonNetwork.NickName;
+		Debug.Log(prefabInstance.name);
 		Transform childTransform = prefabInstance.transform.Find("amongus");
 		if(childTransform == null) {
 			Debug.Log("Empty");
