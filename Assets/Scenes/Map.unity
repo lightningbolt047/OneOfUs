@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12729394, g: 0.1341429, b: 0.121147014, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19297,6 +19297,7 @@ MonoBehaviour:
   speed: 25
   cameraObj: {fileID: 421246050}
   joyStickMode: 0
+  usingPV: 1
 --- !u!143 &641520340
 CharacterController:
   m_ObjectHideFlags: 0
@@ -48880,6 +48881,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 939402879}
     m_Modifications:
+    - target: {fileID: 385310367489091664, guid: dc694259709a7442d9498b5d67037a9a, type: 3}
+      propertyPath: usingPV
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4225188693227207428, guid: dc694259709a7442d9498b5d67037a9a, type: 3}
       propertyPath: sceneViewId
       value: 1
@@ -48942,7 +48947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6372728636837290144, guid: dc694259709a7442d9498b5d67037a9a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6573516418509147002, guid: dc694259709a7442d9498b5d67037a9a, type: 3}
       propertyPath: m_FirstSelected

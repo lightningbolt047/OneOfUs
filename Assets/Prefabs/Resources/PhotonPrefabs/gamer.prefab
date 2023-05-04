@@ -69,6 +69,7 @@ MonoBehaviour:
   speed: 25
   cameraObj: {fileID: 3777370487198797204}
   joyStickMode: 0
+  usingPV: 1
 --- !u!114 &4225188693227207428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,15 +260,15 @@ PrefabInstance:
       objectReference: {fileID: 2189748323126415760, guid: 749e7af19cb59cd499dd3a97c65cefae, type: 3}
     - target: {fileID: 7287137020755404942, guid: 186741bf17cbb0e4fa3ef06daa1f190f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.176
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7287137020755404942, guid: 186741bf17cbb0e4fa3ef06daa1f190f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.412
+      value: -3.88
       objectReference: {fileID: 0}
     - target: {fileID: 7287137020755404942, guid: 186741bf17cbb0e4fa3ef06daa1f190f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.792
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 7287137020755404942, guid: 186741bf17cbb0e4fa3ef06daa1f190f, type: 3}
       propertyPath: m_LocalRotation.w

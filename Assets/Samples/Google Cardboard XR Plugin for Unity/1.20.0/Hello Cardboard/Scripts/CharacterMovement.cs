@@ -14,6 +14,7 @@ public class CharacterMovement : MonoBehaviour
     public GameObject cameraObj;
     [Tooltip("Should be checked if using the Bluetooth Controller to move. If using keyboard, leave this unchecked.")]
     public bool joyStickMode;
+    public bool usingPV=true;
     void Awake()
 	{
 		PV = GetComponent<PhotonView>();
@@ -22,7 +23,7 @@ public class CharacterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(!PV.IsMine)
+        if(usingPV && !PV.IsMine)
 		{
 			Destroy(GetComponentInChildren<Camera>().gameObject);
 		}
@@ -32,7 +33,7 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!PV.IsMine) {
+        if (usingPV && !PV.IsMine) {
 			return;
 		}
         move();
