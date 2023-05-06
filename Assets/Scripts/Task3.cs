@@ -27,7 +27,7 @@ public class Task3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("js3"))
+        if (Input.GetButton("js0"))
         {
             highlight.enabled = false;
             outline.enabled = false;

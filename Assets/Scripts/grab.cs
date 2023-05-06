@@ -50,7 +50,7 @@ public class grab : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
         if (pointerInside)
         {
-            if (Input.GetButtonDown("js3"))
+            if (Input.GetButtonDown("js0"))
             {
                 if (gameObject.transform.parent != reticle.transform)
                 {
@@ -77,7 +77,7 @@ public class grab : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 }
             }
 
-            if (Input.GetButtonDown("js1"))
+            if (Input.GetButtonDown("js0"))
             {
                 gameObject.transform.parent = GameObject.Find("Terrain").transform;
             }
