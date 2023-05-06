@@ -32,7 +32,7 @@ public class ClickTask : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         if (pointerInside)
         {
-            if (Input.GetButtonDown("js3"))
+            if (Input.GetButtonDown("js0"))
             {
                 float distance = Vector3.Distance(gameObject.transform.position,GameObject.Find("Main Camera").transform.position);
                 if (distance<10f)

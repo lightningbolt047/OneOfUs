@@ -24,7 +24,7 @@ public class SettingCanvas : MonoBehaviour
     }
     void OpenCanvas()
     {
-        if (Input.GetKey(KeyCode.B))
+        if (Input.GetButton("js2"))
         {
                 panel.SetActive(true);
                 panelVisible = true;

@@ -45,8 +45,8 @@ public class PlayerManager : MonoBehaviour
 		Vector3 randomSpawnPosition = spawnPosition[randomIndex];
 		spawnPosition.RemoveAt(randomIndex);
 		GameObject prefabInstance = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "gamer"), randomSpawnPosition, Quaternion.identity, 0, new object[] { PV.ViewID });
-		prefabInstance.name = PhotonNetwork.NickName;
-		Debug.Log(prefabInstance.name);
+		//prefabInstance.name = PhotonNetwork.NickName;
+		//Debug.Log(prefabInstance.name);
 		Transform childTransform = prefabInstance.transform.Find("amongus");
 		if(childTransform == null) {
 			Debug.Log("Empty");
